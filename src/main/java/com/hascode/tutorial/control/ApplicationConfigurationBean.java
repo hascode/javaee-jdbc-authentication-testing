@@ -22,7 +22,7 @@ public class ApplicationConfigurationBean {
 	protected void onStartup() throws SQLException {
 		log.info("initializing users and roles..");
 		// use a migration framework here - this is just for the purpose of
-		// demonstration
+		// demonstration, works only once ;)
 		String createUserTable = "CREATE TABLE `users` (`userid` varchar(255) NOT NULL, `password` varchar(255) NOT NULL, PRIMARY KEY (`userid`))";
 		String createGroupTable = "CREATE TABLE `users_groups` ( `groupid` varchar(20) NOT NULL, `userid` varchar(255) NOT NULL)";
 		String addAdminUser = "INSERT INTO `users` VALUES('admin', 'test')";
